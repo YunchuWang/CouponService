@@ -1,0 +1,5 @@
+create_namespace 'passbook'
+
+create 'passbook:coupon', {NAME => 'i', VERSIONS => '3', TTL => '21474836647', 'BLOOMFILTER' => 'ROW'}
+create 'passbook:coupontemplate', {NAME => 'b', VERSIONS => '3', TTL => '21474836647', 'BLOOMFILTER' => 'ROW'}
+create 'passbook:feedback', {NAME => 'b', VERSIONS => '3', TTL => '21474836647', 'BLOOMFILTER' => 'ROW'}

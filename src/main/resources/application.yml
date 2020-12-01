@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: CouponService
+  kafka:
+    consumer:
+      bootstrap-servers: 127.0.0.1:9092
+      group-id: passbook
+    listener:
+      concurrency: 4
+  data:
+    hbase:
+      quorum: 127.0.0.1:2888
+      rootDir: file:///Users/hbase_data/root_dir
+      nodeParent: /hbase
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+server:
+  port: 9528
+
+singleServerConfig:
+  address: "redis://127.0.0.1:${REDIS_PORT}"
+
+zookeeper:
+  znode:
+    parent:
+      /hbase
+
+logging:
+  level.*: DEBUG
+  file: couponservice.log
+
+merchant-service.url: http://MERCHANT-SERVICE
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

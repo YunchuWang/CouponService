@@ -1,0 +1,6 @@
+create_namespace 'passbook'
+
+create 'passbook:coupontemplate','BasicInformation','Constraints'
+create 'passbook:customer','BasicInformation','Constraints', 'ContactInformation'
+create 'passbook:coupon','Information'
+create 'passbook:feedback','Information'
